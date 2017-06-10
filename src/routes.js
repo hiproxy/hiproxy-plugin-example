@@ -14,7 +14,7 @@ module.exports = [
 
       response.writeHead(200, {
         'Content-Type': 'application/json',
-        'Powder-By': 'hiproxy-plugin-test'
+        'Powder-By': 'hiproxy-plugin-example'
       });
 
       response.end(JSON.stringify({

@@ -13,7 +13,7 @@ module.exports = [
     fn: function () {
       var cliArgs = this;
 
-      console.log('Hi, welcome to use hiproxy test plugin');
+      console.log('Hi, welcome to use hiproxy example plugin');
       if (cliArgs.name ) {
         console.log('your name is', cliArgs.name.green);
       }
