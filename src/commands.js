@@ -19,7 +19,7 @@ module.exports = [
       }
 
       if (cliArgs.age ) {
-        console.log('your are', cliArgs.name.green, 'years old');
+        console.log('your are', cliArgs.age.green, 'years old');
       }
     },
     options: {
