@@ -7,11 +7,8 @@
 
 module.exports = [
   {
-    route: '/test',
+    route: '/test(/:pageName)',
     render: function (route, request, response) {
-      var routeArr = route.split('/');
-      var pageName = routeArr.slice(2).join('/');
-
       response.writeHead(200, {
         'Content-Type': 'application/json',
         'Powder-By': 'hiproxy-plugin-example'
@@ -19,7 +16,7 @@ module.exports = [
 
       response.end(JSON.stringify({
         route: route,
-        pageID: pageName,
+        pageID: route.pageName,
         time: new Date(),
         serverState: {
           http_port: hiproxyServer.httpPort,
