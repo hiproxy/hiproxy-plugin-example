@@ -10,21 +10,23 @@ module.exports = [
     route: '/test(/:pageName)',
     render: function (route, request, response) {
       response.writeHead(200, {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/html',
         'Powder-By': 'hiproxy-plugin-example'
       });
 
-      response.end(JSON.stringify({
+      var serverInfo = {
         route: route,
         pageID: route.pageName,
         time: new Date(),
         serverState: {
-          http_port: hiproxyServer.httpPort,
-          https_port: hiproxyServer.httpsPort,
+          http_port: global.hiproxyServer.httpPort,
+          https_port: global.hiproxyServer.httpsPort,
           cliArgs: global.args,
           process_id: process.pid
         }
-      }));
+      };
+
+      response.end('<pre>' + JSON.stringify(serverInfo, null, 4) + '</pre>');
     }
   }
 ];
