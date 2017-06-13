@@ -1,6 +1,6 @@
 # hiproxy-plugin-example
 
-hiproxy插件示例。这个插件为hiproxy添加了一个Rewrite指令、一个CLI命令和一个页面路由。
+hiproxy插件示例。这个插件为hiproxy添加了一个Rewrite指令、一个CLI命令和一个页面路由。
 
 * **名令**：`hello`，执行`hiproxy hello --name <your-name> --age <your-age>`
 * **指令**：`add`，在rewrite文件中使用`add $add_value 1600 88;`
@@ -12,11 +12,11 @@ hiproxy插件示例。这个插件为hiproxy添加了一个Rewrite指令、一�
 npm install hiproxy/hiproxy-plugin-example -g
 ```
 
-> **注意**：必须要把插件安装到全局。hiproxy cli默认去全局查找插件，所以必须保证安装到`npm root -g`所在的目录中，才能被正确加载。
+> **注意**：必须要把插件安装到全局。hiproxy CLI默认去全局查找插件，所以必须保证安装到`npm root -g`所在的目录中，才能被正确加载。
 
 ## 使用
 
-安装完成后，hiproxy会自动加载所有安装的插件并注册插件定义的命令、指令和页面。
+安装完成后，hiproxy会自动加载所有安装的插件并注册插件定义的命令、指令和页面。
 
 ### 命令
 
