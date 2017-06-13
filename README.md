@@ -22,11 +22,11 @@ npm install hiproxy/hiproxy-plugin-example -g
 
 安装好这个示例插件之后，执行`hiproxy --help`，可以看到如下信息，从中我们能发现，有了`hello`这个命令。
 
-![command-hello](https://github.com/hiproxy/hiproxy-plugin-example/raw/master/screen-shot/command.png)
+![command-hello](https://github.com/hiproxy/hiproxy-plugin-example/raw/master/screenshot/command-hello.png)
 
 执行`hp hello --help`，可以看到`hello`命令的帮助信息。
 
-![hello-help](https://github.com/hiproxy/hiproxy-plugin-example/raw/master/screen-shot/hello-help.png)
+![hello-help](https://github.com/hiproxy/hiproxy-plugin-example/raw/master/screenshot/hello-help.png)
 
 ### 页面
 
