@@ -6,6 +6,7 @@ hiproxy插件示例。这个插件为hiproxy添加了一个Rewrite指令、一�
 * **指令**：`add`，在rewrite文件中使用`add $add_value 1600 88;`
 * **路由**：`test`，服务启动之后，访问`http://127.0.0.1:<port>/test`
 
+<br />
 ## 安装
 
 ```bash
@@ -14,10 +15,12 @@ npm install hiproxy/hiproxy-plugin-example -g
 
 > **注意**：必须要把插件安装到全局。hiproxy CLI默认去全局查找插件，所以必须保证安装到`npm root -g`所在的目录中，才能被正确加载。
 
+<br />
 ## 使用
 
 安装完成后，hiproxy会自动加载所有安装的插件并注册插件定义的命令、指令和页面。
 
+<br />
 ### 命令
 
 安装好这个示例插件之后，执行`hiproxy --help`，可以看到如下信息，从中我们能发现，有了`hello`这个命令。
@@ -28,10 +31,12 @@ npm install hiproxy/hiproxy-plugin-example -g
 
 ![hello-help](https://github.com/hiproxy/hiproxy-plugin-example/raw/master/screenshot/hello-help.png)
 
+<br />
 ### 页面
 
 hiproxy-plugin-example为hiproxy添加了一个页面，url为`/test`，使用`hiproxy start --port 8888`启动服务之后，可以访问<http://127.0.0.1:8888/test>查看效果。
 
+<br />
 ### 指令
 
 hiproxy-plugin-example为hiproxy添加了一个rewrite指令`add`来做加法运算。指令的作用域为`[global, domain, location]`，这个指令接收三个参数：
@@ -71,10 +76,12 @@ domain test.hiproxy.io {
 }
 ```
 
+<br />
 ## 开发者
 
 开发者开发新插件时，可以参考`hiproxy-plugin-example`。
 
+<br />
 ### 插件结构
 
 插件作为一个独立的模块安装，入口文件需要导出一个对象，包括三个属性：
@@ -85,7 +92,7 @@ domain test.hiproxy.io {
 
 * **routes**: `<Array>`，用来扩展`hiproxy`的页面路由，数组中每个对象作为一个路由配置，具体配置见[路由配置](#route-config)。
 
-
+<br />
 <a name="command-config"></a>
 ### 命令配置
 
@@ -129,6 +136,7 @@ domain test.hiproxy.io {
 }
 ```
 
+<br />
 <a name="directive-config"></a>
 ### 指令配置
 
@@ -153,6 +161,7 @@ domain test.hiproxy.io {
 }
 ```
 
+<br />
 <a name="route-config"></a>
 ### 路由配置
 
