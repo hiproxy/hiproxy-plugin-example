@@ -97,7 +97,7 @@ domain test.hiproxy.io {
 
 * **directives**: `<Array>`，用来扩展`hiproxy`的rewrite指令，数组中每个对象作为一个指令配置，具体配置见[指令配置](#directive-config)。
 
-* **routes**: `<Array>`，用来扩展`hiproxy`的页面路由，数组中每个对象作为一个路由配置，具体配置见[路由配置](#route-config)。
+* **routes**: `<Array>`，用来扩展`hiproxy`的页面路由，数组中每个对象作为一个路由配置，具体配置见[路由配置](#route-config)。
 
 <br />
 
@@ -147,6 +147,7 @@ domain test.hiproxy.io {
 <br />
 
 <a name="directive-config"></a>
+
 ### 指令配置
 
 命令可以配置的内容为：`指令名称`、`作用域`和`处理函数`。对应的字段为：
@@ -173,6 +174,7 @@ domain test.hiproxy.io {
 <br />
 
 <a name="route-config"></a>
+
 ### 路由配置
 
 路由可以配置的内容为：`路由规则`和`渲染函数`。对应的字段为：
